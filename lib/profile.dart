@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'Verification.dart';
+import 'profileInfo.dart';
 // import 'package:image_picker/image_picker.dart';
 
 class Profile extends StatelessWidget {
@@ -26,9 +27,20 @@ class Profile extends StatelessWidget {
               },
               ),
               Padding(padding: EdgeInsets.only(top:30),),
+              
               TextFormField(
-                
-              ),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(hintText: 'Name'),
+              ).box.width(300).make().centered(),
+              Padding(padding: EdgeInsets.only(top:50),),
+              FlatButton(
+                  child: 'NEXT >'.text.bold.size(20).makeCentered(),
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProfileInfo()));
+                  }),
             ]
           ),
         ),

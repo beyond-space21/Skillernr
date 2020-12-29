@@ -22,7 +22,8 @@ environment:
 
 dependencies:
   velocity_x: ^1.0.1
-  image_picker: ^0.6.7+17
+  email_validator: ^1.0.6
+  # image_picker: ^0.6.7+17
   # hexcolour: ^1.0.6
   flutter:
     sdk: flutter

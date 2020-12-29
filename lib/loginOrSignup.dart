@@ -15,15 +15,10 @@ class LoginSignupPage extends StatelessWidget {
         body: Container(
           child: VStack(
             [
-              // SizedBox(
-              //   height: 20,
-              // ),
+              
               'Skillearnr'.text.size(50).bold.makeCentered(),
               'Learn.Share.Earn'.text.bold.size(15).makeCentered(),
-              // SizedBox(
-              //   width: 100,
-              // ),
-             Padding(padding: EdgeInsets.only(top:20),),
+                             Padding(padding: EdgeInsets.only(top:20),),
               Container(
                 alignment: Alignment.topCenter,
                 height: 250,
@@ -38,7 +33,9 @@ class LoginSignupPage extends StatelessWidget {
                   SizedBox(
                     height:25,
                   ),
-                 TextFormField(),
+                 TextFormField(
+                   keyboardType: TextInputType.number,
+                 ).box.width(300).make().centered(),
                  SizedBox(
                     height:35,
                   ),

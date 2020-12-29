@@ -34,7 +34,7 @@ class VerificationPage extends StatelessWidget {
                   hintText: 'enter verification code',
                   hintStyle: TextStyle(fontSize: 15),
                 ),
-              ),
+              ).box.width(300).make().centered(),
               SizedBox(
                 height: 40,
               ),
