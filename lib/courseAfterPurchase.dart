@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:skillernr/CourseTask.dart';
 import 'package:skillernr/profile.dart';
-import 'LevelSelect.dart';
 import 'Information.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 // import 'package:hexcolour/hexcolour.dart';
-class LandingPage extends StatefulWidget {
+class AfterPurchasePage extends StatefulWidget {
   @override
-  _LandingPageState createState() => _LandingPageState();
+  _AfterPurchasePageState createState() => _AfterPurchasePageState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _AfterPurchasePageState extends State<AfterPurchasePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -57,7 +57,7 @@ class _LandingPageState extends State<LandingPage> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LevelSelectUI()));
+                            builder: (context) => CourseTaskPage()));
                  },
                   ),
                 

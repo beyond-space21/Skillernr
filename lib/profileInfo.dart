@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'profile.dart';
 import 'LandingPage.dart';
-import 'Dateformater.dart';
+// import 'Dateformater.dart';
 // import 'package:email_validator/email_validator.dart';
 
 class ProfileInfo extends StatelessWidget {

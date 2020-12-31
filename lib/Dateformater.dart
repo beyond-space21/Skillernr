@@ -1,4 +1,4 @@
-DateFormator(String input) {
+dateFormator(String input) {
   List list = input.toLowerCase().split('');//give space.
 //   print(decode(list));//Any formate String date to int date// Date formatter.
   // print('d/m/y');
@@ -137,7 +137,7 @@ String decodedata(String data1,data2,data3){
     if(m=='!')return 'e6 some data is missing (or) have input error';
   }else return 'e7 some data is missing (or) have input error';
   
-  return '${d}/${m}/${y}';
+  return '$d/$m/$y';
 }
 
 //------------------------------------------------

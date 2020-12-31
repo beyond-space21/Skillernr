@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:skillernr/profile.dart';
-import 'LevelSelect.dart';
-import 'Information.dart';
+import 'package:skillernr/courseAfterPurchase.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+
+
 // import 'package:hexcolour/hexcolour.dart';
-class LandingPage extends StatefulWidget {
+class PaymentSuccessPage extends StatefulWidget {
   @override
-  _LandingPageState createState() => _LandingPageState();
+  _PaymentSuccessPageState createState() => _PaymentSuccessPageState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _PaymentSuccessPageState extends State<PaymentSuccessPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -37,7 +37,7 @@ class _LandingPageState extends State<LandingPage> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Profile()));
+                            builder: (context) => AfterPurchasePage()));
                   }
             ),
           ),
@@ -45,45 +45,28 @@ class _LandingPageState extends State<LandingPage> {
       ],
         ),
         backgroundColor: Vx.gray200,
-        body: Container(
-          child: VStack(
+        body: 
+          
+         VStack(
             [
-              Padding(padding: EdgeInsets.only(top: 40)),
-              HStack(
-                [
-                  TextButton(
-                 child: courses[0].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){
+               Padding(padding: EdgeInsets.only(top:100),),
+              'Congratulation on your purchase'.text.makeCentered(),
+               Padding(padding: EdgeInsets.only(top:200),),
+               TextButton(child: '    Proceed to course'. text.size(20).black.bold.make().px64(),
+                onPressed: () {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LevelSelectUI()));
-                 },
-                  ),
-                
-                 TextButton(
-                 child:courses[1].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){},
-                  ),
-                ]
-              ),
-              
-               HStack(
-                [
-                 TextButton(
-                 child:courses[2].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){},
-                  ),
-    
-                 TextButton(
-                 child:courses[3].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){},
-                  ),
-                ]
-              ),
-            ],
-          ).centered(),
-        ).scrollVertical(),
+                            builder: (context) => AfterPurchasePage()));
+                  }),
+                  
+                             Padding(padding: EdgeInsets.only(top:20),),
+
+              '        Invite someone you to know'. text.make().px64(),
+
+                         ],
+          ),
+       
 
          bottomNavigationBar: CurvedNavigationBar(
            color: Colors.amber,
