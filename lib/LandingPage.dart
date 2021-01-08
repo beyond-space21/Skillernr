@@ -46,44 +46,60 @@ class _LandingPageState extends State<LandingPage> {
         ),
         backgroundColor: Vx.gray200,
         body: Container(
-          child: VStack(
-            [
-              Padding(padding: EdgeInsets.only(top: 40)),
-              HStack(
-                [
-                  TextButton(
-                 child: courses[0].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => LevelSelectUI()));
-                 },
-                  ),
+          child: ListView(
+            children: <Widget>[
+        Text('Recent Claims'),
+        Table(
+          border: TableBorder.all(color: Colors.black),
+          columnWidths: {
+            0: FixedColumnWidth(100.0),
+            1: FixedColumnWidth(100.0)
+          },
+          children: [
+            for ( var i in cou ) Text(i.toString())
+          ],
+          ),
+            ], 
+        ),
+        // body: Container(
+        //   child: VStack(
+        //     [
+              // Padding(padding: EdgeInsets.only(top: 40)),
+              // HStack(
+              //   [
+              //     TextButton(
+              //    child: Courses().courses[0].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+              //    onPressed: (){
+              //       Navigator.pushReplacement(
+              //           context,
+              //           MaterialPageRoute(
+              //               builder: (context) => LevelSelectUI()));
+              //    },
+              //     ),
                 
-                 TextButton(
-                 child:courses[1].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){},
-                  ),
-                ]
-              ),
+              //    TextButton(
+              //    child:Courses().courses[1].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+              //    onPressed: (){},
+              //     ),
+              //   ]
+              // ),
               
-               HStack(
-                [
-                 TextButton(
-                 child:courses[2].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){},
-                  ),
+              //  HStack(
+              //   [
+              //    TextButton(
+              //    child:Courses().courses[2].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+              //    onPressed: (){},
+              //     ),
     
-                 TextButton(
-                 child:courses[3].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
-                 onPressed: (){},
-                  ),
-                ]
-              ),
-            ],
-          ).centered(),
-        ).scrollVertical(),
+              //    TextButton(
+              //    child:Courses().courses[3].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+              //    onPressed: (){},
+              //     ),
+              //   ]
+              // ),
+            // ],
+        //   ).centered(),
+        // ).scrollVertical(),
 
          bottomNavigationBar: CurvedNavigationBar(
            color: Colors.amber,

@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  snack: ^1.0.5
   velocity_x: ^1.0.1
   email_validator: ^1.0.6
   curved_navigation_bar: ^0.3.7

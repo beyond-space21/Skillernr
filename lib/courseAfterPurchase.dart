@@ -52,7 +52,7 @@ class _AfterPurchasePageState extends State<AfterPurchasePage> {
               HStack(
                 [
                   TextButton(
-                 child: courses[0].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+                 child: "yh".text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
                  onPressed: (){
                     Navigator.pushReplacement(
                         context,
@@ -62,7 +62,7 @@ class _AfterPurchasePageState extends State<AfterPurchasePage> {
                   ),
                 
                  TextButton(
-                 child:courses[1].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+                 child:"rh".text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
                  onPressed: (){},
                   ),
                 ]
@@ -71,12 +71,12 @@ class _AfterPurchasePageState extends State<AfterPurchasePage> {
                HStack(
                 [
                  TextButton(
-                 child:courses[2].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+                 child:"wby".text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
                  onPressed: (){},
                   ),
     
                  TextButton(
-                 child:courses[3].text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
+                 child:"wg".text.black.bold.size(40).makeCentered().box.square(170).roundedLg.blue300.make(),
                  onPressed: (){},
                   ),
                 ]

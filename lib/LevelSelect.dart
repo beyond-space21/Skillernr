@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:skillernr/Cart.dart';
 import 'package:skillernr/LandingPage.dart';
-import 'package:skillernr/retry.dart';
 import 'Information.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:snack/snack.dart';
+
 double rate =0.0;
 bool a=false;
 bool b=false;
 bool c=false;
+final ar = SnackBar(content: Text('Hello, world!'));
 // import 'package:hexcolour/hexcolour.dart';
 class LevelSelectUI extends StatefulWidget {
   @override
@@ -15,7 +18,6 @@ class LevelSelectUI extends StatefulWidget {
 }
 
 class _LevelSelectUIState extends State<LevelSelectUI> {
-  double rate =0.0;
   void addRate(double a){
     setState((){
     rate=rate + a;
@@ -68,7 +70,7 @@ class _LevelSelectUIState extends State<LevelSelectUI> {
               Padding(padding: EdgeInsets.only(bottom: 30)),
                 HStack([
                    VStack([
-                   "  Learn ".richText.withTextSpanChildren([courses[0].textSpan.bold.size(30).make()]).size(25).make().card.gray200.elevation(0).make(),
+                   "  Learn ".richText.withTextSpanChildren(['f'.textSpan.bold.size(30).make()]).size(25).make().card.gray200.elevation(0).make(),
                    "     Purchase subscription to learn".text.make(),
                  ]),
                  
@@ -78,10 +80,14 @@ class _LevelSelectUIState extends State<LevelSelectUI> {
                     '\$$rate'.text.make(),
                     IconButton(
                 icon: Icon(Icons.shopping_cart,size: 30,color:Colors.black,),
-                 onPressed: (){ Navigator.pushReplacement(
+                 onPressed: (){ 
+                            if(a||b||c){
+                              Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => PaymentFailurePage()));},
+                            builder: (context) => Cartpage()));
+                            }
+                            },
                   ),
                 ]),
                   
@@ -90,7 +96,7 @@ class _LevelSelectUIState extends State<LevelSelectUI> {
 
            VStack([
                "Use coupon code skllearnr100 to get 99% off".text.size(13).makeCentered().p16(),
-              ]).box.border().height(60).width(350).makeCentered(),
+              ]).box.border().height(60).width(350).makeCentered().shimmer(primaryColor: Colors.amber,secondaryColor: Colors.black),
               Padding(padding: EdgeInsets.only(bottom: 20)),
            
               FlatButton(
@@ -98,7 +104,7 @@ class _LevelSelectUIState extends State<LevelSelectUI> {
                 
                 child: VStack([
                 "Level 1".text.size(25).bold.make().p1(),
-                'Get the introduction to ${courses[0]} and cover the essentials to learning'.text.make().p12(),
+                'Get the introduction to ${"f"} and cover the essentials to learning'.text.make().p12(),
               ]).box.border(width: 2,color: a?(Colors.green):(Colors.black)).width(350).makeCentered(),
               
               onPressed: (){
@@ -112,7 +118,7 @@ class _LevelSelectUIState extends State<LevelSelectUI> {
                 child: VStack([
                 "Level 2".text.size(25).bold.make().p1(),
                 
-                'Intermidiate of ${courses[0]} and more'.text.make().p12(),
+                'Intermidiate of ${"f"} and more'.text.make().p12(),
               ]).box.border(width: 2,color: b?(Colors.green):(Colors.black)).width(350).makeCentered(),
               onPressed: (){
               if(b){subRate(55);b=false;}
@@ -123,7 +129,7 @@ class _LevelSelectUIState extends State<LevelSelectUI> {
               FlatButton(
                 child: VStack([
                 "Level 3".text.size(25).bold.make().p1(),
-                'Advanced level ${courses[0]} , with 100 tasks'.text.make().p12(),
+                'Advanced level ${"y"} , with 100 tasks'.text.make().p12(),
               ]).box.border(width: 2,color: c?(Colors.green):(Colors.black)).width(350).makeCentered(),
               onPressed: (){
                 
@@ -164,6 +170,7 @@ class _LevelSelectUIState extends State<LevelSelectUI> {
         },
 
          ),
+         
          
       ),
       
